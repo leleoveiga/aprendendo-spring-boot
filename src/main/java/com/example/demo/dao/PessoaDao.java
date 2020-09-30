@@ -15,6 +15,6 @@ public interface PessoaDao {
 
     int deletePessoaById(long id);
 
-    int updatePessoaById(long id, Pessoa pessoa);
+    Pessoa updatePessoaById(long id, Pessoa pessoa);
 
 }

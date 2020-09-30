@@ -24,7 +24,7 @@ public class PessoaController {
     }
 
     @RequestMapping
-    public List<Pessoa> getPessoas(){
+    public List<Pessoa> getPessoas() {
         return pessoaService.getPessoas();
     }
 
@@ -34,6 +34,13 @@ public class PessoaController {
                 .orElse(null);
     }
 
+    @DeleteMapping("{id}")
+    public void deletePessoaById(@PathVariable("id") long id) {
+        pessoaService.deletePessoa(id);
+    }
 
-
+    @PutMapping("{id}")
+    public void updatePessoaById(@PathVariable("id") long id, @RequestBody Pessoa pessoa) {
+        pessoaService.updatePessoa(id, pessoa);
+    }
 }

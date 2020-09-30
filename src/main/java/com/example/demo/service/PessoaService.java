@@ -32,4 +32,12 @@ public class PessoaService {
         return pessoaDao.selectPessoaById(id);
     }
 
+    public int deletePessoa(long id) {
+        return pessoaDao.deletePessoaById(id);
+    }
+
+    public Pessoa updatePessoa(long id, Pessoa pessoa) {
+        return pessoaDao.updatePessoaById(id, pessoa);
+    }
+
 }
